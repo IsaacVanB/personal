@@ -2,4 +2,3 @@
 
 To Do
 - Update visual reconstruction with EEG project
-- Update event RL project
