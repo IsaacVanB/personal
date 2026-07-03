@@ -2,5 +2,3 @@
 
 To Do
 - Update visual reconstruction with EEG project
-- Add drone tracking project
-- Reorder projects
