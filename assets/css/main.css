@@ -131,6 +131,7 @@ input, select, textarea {
 	}
 
 	p {
+		color: #858585;
 		margin: 0 0 2em 0;
 	}
 
@@ -1765,7 +1766,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #b2b2b2;
+		color: #858585;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -2027,12 +2028,21 @@ input, select, textarea {
 			line-height: inherit;
 		}
 
-		.icon.solid:before {
-			font-weight: 900;
-		}
+	.icon.solid:before {
+		font-weight: 900;
+	}
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+	.icon.brands:before {
+		font-family: 'Font Awesome 5 Brands';
+	}
+
+	.fa-solid {
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+	}
+
+		.fa-solid > .label {
+			display: none;
 		}
 
 /* Image */
@@ -2567,6 +2577,7 @@ input, select, textarea {
 		}
 
 		.work-item p {
+			color: #858585;
 			font-size: 0.8em;
 			line-height: 1.5em;
 			margin: 0;
@@ -2636,6 +2647,10 @@ input, select, textarea {
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
+		}
+
+		#header .sidebar-tagline {
+			display: block;
 		}
 
 		#header .image.avatar {
