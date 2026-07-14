@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Visual Reconstruction with EEG - Isaac Van Benthuysen</title>
+		<title>Fish Painting - Isaac Van Benthuysen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -32,20 +32,30 @@
 
 				<section id="one">
 					<header class="major">
-						<h2>Visual Reconstruction with EEG</h2>
-						<p>Fall 2025 - Present</p>
+						<h2>Fish Painting</h2>
+						<p>Mapping guppy motion to a digital paintbrush</p>
 					</header>
 
-					<h2>Project Description</h2>
-					<p>​​Determining what a person is seeing based on data from the brain has been a longstanding interest in the field of neuroscience. With the advent of machine learning, visual decoding and reconstruction has become an attainable goal. Multiple groups have successfully decoded and reconstructed visual imagery with fMRI, but not as many have done this with EEG, a cheaper and simpler instrument. Very recently (in the 2020s), other groups have used EEG to successfully decode and reconstruct visual imagery, using a variety of machine learning architectures.</p>
-					<p>Continuing on our work from the {previous semester (link to visual decoding)}, we created a PyTorch pipeline that extracts low-level visual features, such as color and rough shape, from EEG recordings. This low-level feature image is combined with a decoded class label and fed into Stable Diffusion to generate what the subject was looking at when the EEG was recorded.</p>
-					<p>A full project write-up is in progress.</p>
+					<p>After seeing a rat "paint" by running across a canvas with paint on its feet, I wanted a way to let my guppies "paint." Covering them in paint would not end well, so I made this program to track their motion and map it to a digital paintbrush.</p>
 
-					<h2>Poster</h2>
-					<a href="../pdfs/Visual_Reconstruction_EEG_Poster.pdf" class="image fit"><img src="../images/Visual_Reconstruction_EEG_Poster.jpg" alt="Image of poster" /></a>
+					<span class="image fit"><img src="../images/fish_painting.png" alt="Fish painting project cover image" /></span>
+
+					<h2>Project Description</h2>
+					<p>I made this using YOLOv11 to identify individual fish and track their motion across video frames. With a list of coordinates for each guppy, the code filters out misidentifications by removing points where the guppy appears to jump to another spot in the tank. Gaps in the guppy's path, such as when it is occluded by a leaf, are compensated for by filling in points between the last known coordinates. Each guppy gets its own paintbrush color, eyedropped from a photo of the fish.</p>
+
+					<p>This approach worked fine at first, but all of the guppies I trained the YOLO model on have since passed away, which revealed a glaring failure mode. Retraining the model every time I get a new fish isn't practical, so my next goal is to implement Re-ID. An object recognition model trained to recognize fish, combined with Re-ID, should make this program work for any fish.</p>
+
+					<h2>To Do</h2>
+					<ul>
+						<li>Reorganize repo (move beyond notebook)</li>
+						<li>Make canvas automatically from video (current background was made manually)</li>
+						<li>Implement Kalman Filter for point interpolation</li>
+						<li>Learn about Re-ID</li>
+						<li>Implement Re-ID (Note: YOLO26 seems to support it, but coding from scratch will be better for learning)</li>
+					</ul>
 
 					<h2>Github</h2>
-					<p>Code for this project can be found at our <a href="https://github.com/IsaacVanB/visual-reconstruction-eeg/tree/main">Github page</a>.</p>
+					<p>Code for this project can be found at <a href="https://github.com/IsaacVanB/fish-painting">IsaacVanB/fish-painting</a>.</p>
 				</section>
 
 				<section id="two">
