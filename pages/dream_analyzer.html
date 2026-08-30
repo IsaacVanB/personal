@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Projects - Isaac Van Benthuysen</title>
+		<title>Dream Analyzer - Isaac Van Benthuysen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -32,46 +32,33 @@
 
 				<section id="one">
 					<header class="major">
-						<h2>Projects</h2>
+						<h2>Dream Analyzer</h2>
+						<p>Summer 2026 - Present</p>
 					</header>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="visual_reconstruction_eeg.html" class="image fit thumb"><img src="../images/eeg_sd_grid.png" alt="" /></a>
-							<h3>Visual Reconstruction with EEG</h3>
-							<p>Reconstructing visual imagery from EEG brain activity</p>
-							<p><a href="visual_reconstruction_eeg.html">Learn more</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="drone.html" class="image fit thumb"><img src="../images/tracking.png" alt="" /></a>
-							<h3>Vision-Guided Quadrotor Drone</h3>
-							<p>Enabling a drone to autonomously track a ground robot</p>
-							<p><a href="drone.html">Learn more</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="event_rl.html" class="image fit thumb"><img src="../images/model_event_rl.jpg" alt="" /></a>
-							<h3>Event-Driven Reinforcement Learning for Autonomous Navigation using Neuromorphic Camera</h3>
-							<p>Enabling a ground robot to navigate autonomously via event camera</p>
-							<p><a href="event_rl.html">Learn more</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="fish_painting.html" class="image fit thumb"><img src="../images/fish_painting.png" alt="" /></a>
-							<h3>Fish Painting</h3>
-							<p>Mapping guppy motion to a digital paintbrush</p>
-							<p><a href="fish_painting.html">Learn more</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="visual_decoding_eeg.html" class="image fit thumb"><img src="../images/preview_eeg.png" alt="" /></a>
-							<h3>Visual Decoding with EEG</h3>
-							<p>Determining what a person is looking at based on brain activity</p>
-							<p><a href="visual_decoding_eeg.html">Learn more</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="dream_analyzer.html" class="image fit thumb"><img src="../images/model_eeg.png" alt="" /></a>
-							<h3>Dream Analyzer</h3>
-							<p>Dream analysis project</p>
-							<p><a href="dream_analyzer.html">Learn more</a></p>
-						</article>
-					</div>
+
+					<span class="image fit"><img src="../images/model_eeg.png" alt="Dream Analyzer placeholder image" /></span>
+
+					<h2>Project Description</h2>
+					<p>Dream Analyzer is a local Python pipeline for parsing a dream journal, embedding dreams with Ollama, storing them in ChromaDB, and asking retrieval-augmented questions. The goal is to analyze a private dream journal over time while keeping all raw journal data local.</p>
+					<p>The project is designed to support semantic dream retrieval, theme extraction, longitudinal analysis, graphing, and eventually a CLI or GUI interface where a user can ask natural-language questions about their dream journal. It is currently a work in progress.</p>
+
+					<h2>Workflow</h2>
+					<p>The pipeline parses plain-text journal entries grouped by date, supports optional tag lines, and exports structured dream records. Those records can then be embedded into a ChromaDB index for semantic search and retrieval-augmented generation using locally running Ollama models.</p>
+
+					<h2>Current Tools</h2>
+					<ul>
+						<li>Retrieve similar dreams with semantic search.</li>
+						<li>Plot tag frequency over time.</li>
+						<li>Cluster dream embeddings and generate theme evidence, static plots, an interactive map, and per-dream assignments.</li>
+						<li>Compute summary statistics for the journal.</li>
+						<li>Analyze a single dream, optionally with related dreams for context.</li>
+						<li>Extract structured features and build a character lookup from dream records.</li>
+						<li>Ask retrieval-augmented questions with a basic RAG script or a tool-capable dream agent.</li>
+						<li>Compare chat and embedding model combinations and evaluate retrieval quality.</li>
+					</ul>
+
+					<h2>Github</h2>
+					<p>Code for this project can be found at <a href="https://github.com/IsaacVanB/dream-analyzer">IsaacVanB/dream-analyzer</a>.</p>
 				</section>
 
 				<section id="two">
